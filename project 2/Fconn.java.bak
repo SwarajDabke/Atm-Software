@@ -1,0 +1,22 @@
+import java.sql.*; 
+
+class Fconn
+{
+	 Connection c;
+	 Statement s;
+	Fconn()
+	{
+		try
+		{
+			Class.forName("com.mysql.cj.jdbc.Driver")
+				c =DriverManager.getConnection("jdbc:mysql:///bms","root","143198");
+				s=c.createStatement();
+		}
+		catch (Exception e)
+		{
+			System.out.println(e);
+		}
+			
+		}
+}
+
